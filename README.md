@@ -83,7 +83,7 @@ A card visual was used to represent count of active members.
         
 
  
-- Following Dax was used to find  average time it took to complete a delivery.
+- Following Dax was used to find the average time it took to complete a delivery.
  
          AverageDeliveryMonth = 
             VAR CompletedDelivery = 
@@ -117,7 +117,7 @@ A card visual was used to represent these KPI.
 
 
 
- # Bookmark was used for button to easily navigate within the dashboard.
+ # Bookmark was used for buttons to easily navigate within the dashboard.
 
  
 ![Image](https://github.com/user-attachments/assets/a6b9bd90-6d79-4e4b-aa21-cc1552aa2bdc)
