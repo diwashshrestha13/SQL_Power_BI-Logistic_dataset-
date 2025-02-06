@@ -26,6 +26,9 @@ Applied aggregations, joins, and filters to extract key metrics.
 
 Established a connection between SQL and Power BI by importing and structuring the data for visualization.
 - Data Modeling
+- Using 3 dimension table, 4 facts table (including a created date table), and a bridge table joining employee and shipment. 
+
+
 
 Created relationships between tables.
 - Built a Calendar Table for time-based analysis (date filtering, YTD, MTD calculations).
@@ -211,3 +214,5 @@ Which customer paid the highest shipment charge?
 
 Name of the customer with highest payment due in California?
 ![Image](https://github.com/user-attachments/assets/ac1053a1-4022-48b4-9ce7-dee0bacfe879)
+
+Dateset Used: https://www.kaggle.com/datasets/aashokaacharya/logistics-company-dataset-for-sql
