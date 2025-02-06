@@ -125,7 +125,7 @@ A card visual was used to represent these KPI.
 
 ![Image](https://github.com/user-attachments/assets/4c1b9c22-3272-400f-88d9-2814e8a9a1c7)
 
-![Image](https://github.com/user-attachments/assets/bf2bfe13-7645-4f42-8310-a498c0b2a345)
+![Image](https://github.com/user-attachments/assets/0e19264e-ebf3-4ed3-8000-8459e4428211)
 
 # Insights
 
