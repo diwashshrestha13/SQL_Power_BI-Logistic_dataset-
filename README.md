@@ -107,16 +107,18 @@ New measure was created to calculate average price per weight and shipment charg
             RETURN
         DIVIDE(totalcharge, totalshipment,0) 
 
- A card visual was used to represent these KPI.
+A card visual was used to represent these KPI.
  
  
 ![Image](https://github.com/user-attachments/assets/3eebb89b-3af7-43ed-9365-f99403d9c369)
 
-Bookmark was used for button to easily navigate within the dashboard.
 
-The report was then published to Power BI Service.
-![Image](https://github.com/user-attachments/assets/a6b9bd90-6d79-4e4b-aa21-cc1552aa2bdc)
+
+ # Bookmark was used for button to easily navigate within the dashboard.
+
  
+![Image](https://github.com/user-attachments/assets/a6b9bd90-6d79-4e4b-aa21-cc1552aa2bdc)
+ # The report was then published to Power BI Service.
  # Report Snapshot (Power BI DESKTOP)
 
 ![Image](https://github.com/user-attachments/assets/c1c01bfe-d21d-4738-b5e5-3f994b0dced0)
