@@ -28,7 +28,7 @@ Established a connection between SQL and Power BI by importing and structuring t
 - Data Modeling
 - Using 3 dimension table, 4 facts table (including a created date table), and a bridge table joining employee and shipment. 
 
-
+![Image](https://github.com/user-attachments/assets/bf068c83-f2d8-411e-aee6-4f965e0b27d2)
 
 Created relationships between tables.
 - Built a Calendar Table for time-based analysis (date filtering, YTD, MTD calculations).
