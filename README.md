@@ -1,6 +1,3 @@
-
-
-
 # Logistic-Dashboard
 
 
@@ -57,6 +54,7 @@ for creating cumulative measure following DAX expression was written;
                 )
         )
 Snap of the line graph: 
+
 ![Image](https://github.com/user-attachments/assets/e23fa154-3183-4d12-80a0-3dd232f49c11)
 
         
@@ -94,6 +92,7 @@ A card visual was used to represent count of active members.
         SUM('status'[Date_Difference])/ [Delivery Completed]
  
  A card visual was used to represent this average.
+
 ![Image](https://github.com/user-attachments/assets/278346d8-7104-485c-90e6-c7bb643babd8)
 
 
@@ -179,22 +178,34 @@ The value will changed based on the filter selected.
 
 ### Some Business Question Solved through SQL Query
 How are customer divided based on the payment mode?
+
 ![Image](https://github.com/user-attachments/assets/b5689c41-2c88-47c4-95e6-767c0f340cc5)
 
+
 What are the number of employee for each designation?
+
 ![Image](https://github.com/user-attachments/assets/ffeffae9-f20e-426a-9025-f5e7ddc63894)
 
+
 What is the delivered percentage for each employee designation?
+
 ![Image](https://github.com/user-attachments/assets/7b4a9e69-4ff0-4813-a0d7-cd5095433e29)
 
+
 Which Customer ID / Member ID has been the member for the longest?
+
 ![Image](https://github.com/user-attachments/assets/d5b6120c-a777-4c2a-8e1e-feab7b56f87e)
 
+
 Cumulative column of Undelivered status over the years
+
 ![Image](https://github.com/user-attachments/assets/5bf60aaa-bc24-412c-8e29-567fdfa1361e)
 
 Which customer paid the highest shipment charge?
+
 ![Image](https://github.com/user-attachments/assets/bd7f40fb-cf73-4dd1-b52a-13350218f983)
+
+
 
 Name of the customer with highest payment due in California?
 ![Image](https://github.com/user-attachments/assets/ac1053a1-4022-48b4-9ce7-dee0bacfe879)
