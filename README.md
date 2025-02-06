@@ -3,9 +3,9 @@
 
 ## Problem Statement
 
-The dashboard presented helps the company to understand three key business operation, Delivery Performance, Customer Management, and Logistic Insight. The company has data from 1971 to 2019 which includes deliveries, customer information, and revenue.
+The dashboard presented helps the company to understand three key business operations, Delivery Performance, Customer Management, and Logistic Insights. The company has data from 1971 to 2019 which includes deliveries, customer information, and revenue.
 
-The customer has failed to deliver 50% of it's deliveries, which has decreased it's earning potential, with the company only making more money than due from it's customer in 2017. Besides, it also has a poor membership retention rate of 10.5%. The dashboard aims to provide insights the area the company can make improvements from it's type of service, delivery status, and shipping domain and reduce it's service to most profitable. 
+The customer has failed to deliver 50% of it's deliveries, which has decreased it's earning potential, with the company only making more money than due from it's customer in 2017. Besides, it also has a poor membership retention rate of 10.5%. The dashboard aims to provide insights in the areas the company can make improvements from it's type of service, delivery status, and shipping domain and reduce it's service to most profitable. 
 
 
 ### Steps followed 
@@ -20,13 +20,13 @@ Loaded the Excel files into SQL database tables.
 Standardized data formats and optimized structure for querying.
 - Data Analysis in SQL
 
-Wrote SQL queries to derive insights, understand the data and answer business questions.
+Wrote SQL queries to derive insights, understand the data, and answer business questions.
 Applied aggregations, joins, and filters to extract key metrics.
 - Data Load to Power BI
 
 Established a connection between SQL and Power BI by importing and structuring the data for visualization.
 - Data Modeling
-- Using 3 dimension table, 4 facts table (including a created date table), and a bridge table joining employee and shipment. 
+- Using 3 dimensions table, 4 facts table (including a created date table), and a bridge table joining employee and shipment. 
 
 ![Image](https://github.com/user-attachments/assets/bf068c83-f2d8-411e-aee6-4f965e0b27d2)
 
@@ -38,25 +38,19 @@ Created relationships between tables.
 Designed a Power BI dashboard with key insights and visuals separted into 3 dashboard.
 - Created DAX measures for KPIs like average KPI's, cumilative earnings, ratios, filters.
            
-- A cumulative earnings received was calculated using DAX and visualized in a line chart over the years to visualize the year company earned more than the due sum from customers. 
-- A bar chart comparing orders delivered and orders pending to unnderstand the year the company performance trend. 
+- Cumulative earnings received were calculated using DAX and visualized in a line chart over the years to visualize the year company's earning against the due sum from customers. 
+- A bar chart comparing orders delivered and orders pending to understand the year the company performance trend. 
 - A stacked column chart to understand the category, in which the company made the highest revenue but also which industry the company failed to receive payment from. 
 
-Some example of the DAX measure used and it's usage. 
+Some examples of the DAX measure used usage. 
 
-for creating cumulative measure following DAX expression was written;
+for creating cumulative paid received measures following DAX expression was written;
        
-        CumulativeMembers = 
-            VAR MaxDate = MAX('CALENDAR'[Date])
-        RETURN 
-            CALCULATE(
-        COUNT('membership'[MembershipStatus]), 
-            FILTER(
-                ALL('CALENDAR'),
-                    'CALENDAR'[Date] <= MaxDate
-                )
-        )
-Snap of the line graph: 
+       cumulativepaid = CALCULATE(
+                      SUM(payment_details[Paid_Column]), 
+               'CALENDAR'[Date] <= MAX('CALENDAR'[Date])) 
+               
+line graph: 
 
 ![Image](https://github.com/user-attachments/assets/e23fa154-3183-4d12-80a0-3dd232f49c11)
 
@@ -76,7 +70,7 @@ Snap of the line graph:
                 )
             )
         
-A card visual was used to represent count of active members.
+A card visual was used to represent the count of active members.
 
 ![Image](https://github.com/user-attachments/assets/cefaee4e-eee7-4824-b4cc-f11806fa6fb3)
 
@@ -100,9 +94,8 @@ A card visual was used to represent count of active members.
 
 
  
-New measure was created to calculate average price per weight and shipment charge. 
- 
- Following DAX expression was written to find total distance,
+A new measure was created to calculate the average price per weight and shipment charge. 
+
  
          AvgShipmentCharge = 
                 VAR totalcharge = SUM(shipment_details[SH_CHARGES])
@@ -135,7 +128,7 @@ A card visual was used to represent these KPI.
 Following inferences can be drawn from the dashboard;
 
 ### [1] Total Number of orders = 200
-    most failed delivers are between 1975-1985 and 2005-2015.
+    most penidngs are between 1975-1985 and 2005-2015.
    Number of orders fulfilled = 100 (50 %)
 
    Number of orders pending = 100 (50 %)
@@ -146,7 +139,7 @@ Following inferences can be drawn from the dashboard;
     Cumulative earning in 2017 = $4,651,927
     Present Payment Due = $4,645,041
    
-The company's earning received only reached higher than it's pending earning    due to failed delivery in 2017
+The company's earnings received only reached higher than pending earnings due to failed delivery in 2017
 
   
   ### [3] Revenue per Category  
@@ -154,14 +147,14 @@ The company's earning received only reached higher than it's pending earning    
       a) Construction - $1.19 million
       b) Healthcare- $0.7 million (Highest earned)
       c) Construction- $0.6 (Highest Due)
-The value will changed based on the filter selected. 
+The value will change based on the filter selected. 
 
  ### [4] Some other insights based on filters 
  
  ### Shipping Domain
- 1.1) $2.57 Million Earned from International of 91 shipment.
+ 1.1) $2.57 Million Earned from International of 91 shipments.
  
- 1.2) $2.28 Million Earned from Domestic of 109 shipment.
+ 1.2) $2.28 Million Earned from Domestic of 109 shipments.
  
  1.3) $102 Express Shipment / 98 Express Shipment 
 
@@ -169,25 +162,25 @@ The value will changed based on the filter selected.
  
          thus, the company must look more into international express shipment. 
  
- ### Customer Undestanding
+ ### Customer Insights
  
- 2.1)  12.77 % retention rate, 12 Active member, and 87 customer among whom 45 paid prefer card payment.
+ 2.1)  12.77 % retention rate, 12 Active members, and 87 customers among whom 45 paid prefer card payment.
  
- 2.2)  8.49 % retention rate, 9 Active members, 98 customer among whom 55 paid for cash on delivery.
+ 2.2)  8.49 % retention rate, 9 Active members, 98 customers among whom 55 paid for cash on delivery.
  
- 2.3)  Most of the paid customer came between 1994-2019 - 65 (second half of business life) than first half - 37 (first half of business)
+ 2.3)  Most of the paid customers came between 1994-2019 - 65 (second half of business life) than first half - 37 (first half of business)
  
- 2.4)  The highest earnings came from wholesale customer preferring cash on delivery who also had a higher retention rate of 14.81% with equal preference for card payment and cash on delivery.
-         Although the membership retention rate is good for customer who prefer card payment, most of the revenue comes from cash on delivery, so the company could focus more on cash on delivery who are wholesale member if the goal is to increase revenue.
+ 2.4)  The highest earnings came from wholesale customers preferring cash on delivery who also had a higher retention rate of 14.81% with equal preference for card payment and cash on delivery.
+         Although the membership retention rate is good for customers who prefer card payment, most of the revenue comes from cash on delivery, so the company could focus more on cash on delivery who are wholesale members if the goal is to increase revenue.
          
 
-### Some Business Question Solved through SQL Query
-How are customer divided based on the payment mode?
+### Some Business Questions Solved through SQL Query
+How are customers divided based on the payment mode?
 
 ![Image](https://github.com/user-attachments/assets/b5689c41-2c88-47c4-95e6-767c0f340cc5)
 
 
-What are the number of employee for each designation?
+What is the number of employees for each designation?
 
 ![Image](https://github.com/user-attachments/assets/ffeffae9-f20e-426a-9025-f5e7ddc63894)
 
